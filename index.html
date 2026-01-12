@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Modern Furniture Mall</title>
+
+    <!-- INTERNAL CSS (STYLED INSIDE HTML) -->
+    <style>
+    body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        background: #f4f4f4;
+    }
+
+    header {
+        background: #3b2f2f;
+        color: white;
+        padding: 25px;
+        text-align: center;
+    }
+
+    nav {
+        background: #5a3e36;
+        padding: 12px;
+        text-align: center;
+        position: sticky;
+        top: 0;
+        z-index: 100;
+    }
+
+    nav a {
+        color: white;
+        margin: 12px;
+        text-decoration: none;
+        font-weight: bold;
+    }
+
+    /* Section styling */
+    .product-category-section {
+        padding: 30px;
+        background: white;
+        margin: 20px;
+        border-radius: 8px;
+    }
+
+    .product-category-section h3 {
+        color: #3b2f2f;
+        margin-bottom: 20px;
+    }
+
+    .product-category-section h4 {
+        color: #5a3e36;
+        margin: 25px 0 15px;
+    }
+
+    /* Grid layout */
+    .products-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+        gap: 20px;
+    }
+
+    /* Product card */
+    .product-item-card {
+        background: #ffffff;
+        padding: 10px;
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        display: flex;
+        flex-direction: column;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .product-item-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 8px 18px rgba(0,0,0,0.15);
+    }
+
+    /* Product image */
+    .product-item-card img {
+        width: 100%;
+        height: 200px;
+        object-fit: auto;
+        border-radius: 6px;
+        margin-bottom: 10px;
+    }
+
+    /* Product text */
+    .product-item-card .title {
+        font-size: 16px;
+        font-weight: bold;
+        margin: auto;
+        color: #3b2f2f;
+    }
+
+    .product-item-card .desc {
+        font-size: 14px;
+        color: #555;
+        margin-bottom: 10px;
+        flex-grow: 1;
+    }
+
+    .product-item-card .price {
+        color: #b12704;
+        font-weight: bold;
+        margin-bottom: 10px;
+    }
+
+    /* Buttons */
+    button,
+    .btn {
+        width: 100%;
+        padding: 10px;
+        background: #3b2f2f;
+        color: white;
+        border: none;
+        cursor: pointer;
+        border-radius: 5px;
+        font-weight: bold;
+    }
+
+    button:hover,
+    .btn:hover {
+        background: #5a3e36;
+    }
+
+    input,
+    textarea {
+        width: 100%;
+        padding: 10px;
+        margin: 10px 0;
+    }
+
+    footer {
+        background: #3b2f2f;
+        color: white;
+        text-align: center;
+        padding: 15px;
+        margin-top: 30px;
+    }
+</style>
+
+</head>
+
+<body>
+
+<header>
+    <h1>Modern Furniture Mall</h1>
+    <p>Comfort • Style • Quality</p>
+</header>
+
+<nav>
+    <a href="#home">Home</a>
+    <a href="#categories">Categories</a>
+    <a href="#register">Register</a>
+    <a href="#support">Customer Care</a>
+    <a href="#contact">Contact</a>
+    <a href="#delivery">Delivery</a>
+</nav>
+
+<!-- PAGE 1: HOME -->
+<section class="product-category-section" id="furniture">
+ <h2>About Our Furniture Mall</h2>
+    <p>
+        Modern Furniture Mall provides high-quality furniture for homes,
+        offices, and commercial spaces. Our goal is to offer comfort,
+        durability, and modern designs at affordable prices.
+    </p>
+
+    <h3>What We Do</h3>
+    <p>
+        We sell bed frames, sofas, chairs, tables, and picture frames to meet
+        different customer needs.
+    </p>
+
+    <h3>Why Choose Us</h3>
+    <ul>
+        <li>Quality furniture</li>
+        <li>Affordable pricing</li>
+        <li>Fast delivery services</li>
+        <li>Excellent customer support</li>
+    </ul>
+    <h3>Furniture Categories</h3>
+
+    <!-- Chairs -->
+    <h4>Chairs</h4>
+    <div class="products-grid">
+
+        <div class="product-item-card" data-product-id="F001">
+            <img src="images/chair1.jpg" alt="Office Chair">
+            <div class="title">Office Chair</div>
+            <div class="desc">Comfortable office chair suitable for long working hours.</div>
+            <div class="price" data-price="650">GH₵ 650.00</div>
+            <button class="btn add-to-cart-btn" data-name="Office Chair" data-price="650">Add to Cart</button>
+        </div>
+
+        <div class="product-item-card" data-product-id="F002">
+            <img src="images/chair2.JPG" alt="Dining Chair">
+            <div class="title">Dining Chair</div>
+            <div class="desc">Stylish dining chair perfect for modern homes.</div>
+            <div class="price" data-price="450">GH₵ 450.00</div>
+            <button class="btn add-to-cart-btn" data-name="Dining Chair" data-price="450">Add to Cart</button>
+        </div>
+
+    </div>
+
+    <!-- Sofas -->
+    <h4>Sofas</h4>
+    <div class="products-grid">
+
+        <div class="product-item-card" data-product-id="F003">
+            <img src="images/chair3.JPG"  width="200px" height="100px" alt="Luxury Sofa">
+            <div class="title">Luxury Sofa</div>
+            <div class="desc">Elegant luxury sofa designed for maximum comfort.</div>
+            <div class="price" data-price="1400">GH₵ 1,400.00</div>
+            <button class="btn add-to-cart-btn" data-name="Luxury Sofa" data-price="1400">Add to Cart</button>
+        </div>
+
+    </div>
+
+    <!-- Bed Frames -->
+    <h4>Bed Frames</h4>
+    <div class="products-grid">
+
+        <div class="product-item-card" data-product-id="F004">
+            <img src="images/frame1.JPG" alt="King Size Bedframe">
+            <div class="title">King Size Bedframe</div>
+            <div class="desc">Strong and durable king-size bed frame.</div>
+            <div class="price" data-price="2200">GH₵ 2,200.00</div>
+            <button class="btn add-to-cart-btn" data-name="King Size Bedframe" data-price="2200">Add to Cart</button>
+        </div>
+
+    </div>
+
+    <!-- Tables -->
+    <h4>Tables</h4>
+    <div class="products-grid">
+
+        <div class="product-item-card" data-product-id="F005">
+            <img src="images/table1.JPG" alt="Dining Table">
+            <div class="title">Dining Table</div>
+            <div class="desc">Spacious dining table for family meals.</div>
+            <div class="price" data-price="1100">GH₵ 1,100.00</div>
+            <button class="btn add-to-cart-btn" data-name="Dining Table" data-price="1100">Add to Cart</button>
+        </div>
+
+    </div>
+
+    <!-- Picture Frames -->
+    <h4>Picture Frames</h4>
+    <div class="products-grid">
+
+        <div class="product-item-card" data-product-id="F006">
+            <img src="images/frame2.JPG" alt="Wall Picture Frame">
+            <div class="title">Wall Picture Frame</div>
+            <div class="desc">Decorative wall frame for photos and artwork.</div>
+            <div class="price" data-price="120">GH₵ 120.00</div>
+            <button class="btn add-to-cart-btn" data-name="Wall Picture Frame" data-price="120">Add to Cart</button>
+        </div>
+
+    </div>
+</section>
+
+
+<!-- PAGE 3: REGISTRATION -->
+<section id="register">
+    <h2>Customer Registration</h2>
+    <form>
+        <input type="text" placeholder="Full Name" required>
+        <input type="email" placeholder="Email Address" required>
+        <input type="tel" placeholder="Phone Number">
+        <input type="password" placeholder="Password" required>
+        <button type="submit">Register</button>
+    </form>
+</section>
+
+<!-- PAGE 4: CUSTOMER CARE -->
+<section id="support">
+    <h2>Customer Care Service</h2>
+    <p>
+        If you are experiencing any challenges or have complaints,
+        please contact our customer care team using the form below.
+    </p>
+
+    <form>
+        <input type="text" placeholder="Your Name">
+        <input type="email" placeholder="Your Email">
+        <textarea placeholder="Describe your issue"></textarea>
+        <button type="submit">Submit</button>
+    </form>
+</section>
+
+<!-- PAGE 5: CONTACT -->
+<section id="contact">
+    <h2>Contact & Location</h2>
+    <p><strong>Address:</strong> Abeka Lapaz, Ghana</p>
+    <p><strong>Phone:</strong> +233 537 140 872</p>
+    <p><strong>Email:</strong> info@furnituremall.com</p>
+
+    <h3>Working Hours</h3>
+    <p>Monday – Saturday: 8:00 AM – 7:00 PM</p>
+    <p>Sunday: Closed</p>
+</section>
+
+<!-- PAGE 6: DELIVERY -->
+<section id="delivery">
+    <h2>Delivery Services</h2>
+    <p>
+        We offer fast and reliable delivery services across Ghana,
+        ensuring your furniture arrives safely and on time.
+    </p>
+
+    <ul>
+        <li>Same-day delivery within Accra</li>
+        <li>Nationwide delivery</li>
+        <li>Affordable delivery charges</li>
+        <li>Careful handling of goods</li>
+    </ul>
+</section>
+
+<footer>
+    © 2026 Modern Furniture Mall
+</footer>
+
+</body>
+</html>
